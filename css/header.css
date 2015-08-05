@@ -1,0 +1,102 @@
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: "microsoft yahei", sans-serif;
+    height: 100%;
+}
+
+.header{
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    border-bottom: 1px solid #e2e2e2;
+    -webkit-box-shadow: 0 4px 4px -4px #d2d2d2;
+    -moz-box-shadow: 0 4px 4px -4px #d2d2d2;
+    box-shadow: 0 4px 4px -4px #d2d2d2;
+}
+
+.logo{
+    height: 30px;
+    padding: 10px 50px 10px 10px;
+    display: inline-block;
+    float: left;
+}
+
+.header-nav{
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 330px;
+}
+
+.header-nav a{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover{
+    color: #03a9f4;
+}
+
+.header-tool{
+    display: inline-block;
+    float: right;
+    height: 50px;
+    width: 105px;
+}
+.header-tool div{
+    float: left;
+    display: block;
+    border-left: 1px solid #e2e2e2;
+    width: 29px;
+    height: 30px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0;
+}
+.header-user-avatar{
+    width: 30px;
+    height: 30px;
+    /*头像圆角*/
+    border-radius: 50%;
+}
+.tool-pop{
+    width: auto;
+    height: auto;
+}
+.tool-pop div{
+    display: none;
+    position: absolute;
+    right: 10px;
+    width: 200px;
+    box-shadow: 0 0 25px #c1c1c1;
+    border: 1px solid #e2e2e2;
+    outline: none;
+}
+.tool-pop a{
+    text-decoration: none;
+    display: block;
+    line-height: 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 13px;
+    color: #383838;
+}
+.tool-pop a:hover{
+    background-color: #e8e8e8;
+}
+
