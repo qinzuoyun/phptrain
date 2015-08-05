@@ -14,8 +14,16 @@
   text-align: center;
   /*±ß¿òÔ²½Ç*/
   border-radius:4px;
-  border: 1px solid #000000;
+  border: 1px solid #c1c1c1;
+  /*Õë¶ÔchromeµÄÀ¶É«¾Û½¹*/
+  outline:none;
 }
+.border:focus,
+.border:hover
+{
+  border: 1px solid #7b7c7d;
+}
+
 
 /*logo*/
 .logo {
@@ -36,7 +44,7 @@
   color: #ffffff;
   font-size: 24px;
   /*È¥µô°´Å¥µÄÍ¹Æð*/
-  border:1px solid #03A9F4;
+  border:1px solid #c1c1c1;
   /*±ß¿òÔ²½Ç*/
   border-radius:4px;
 }
