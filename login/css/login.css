@@ -1,0 +1,53 @@
+/*定位*/
+.location {
+  margin: 0 335px;
+  width: 600px;
+  height: 660px;
+  border: 1px solid#000000;
+}
+/*输入框大小*/
+.border {
+  margin: 0 150px 40px 150px;
+  width: 300px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  /*边框圆角*/
+  border-radius:4px;
+  border: 1px solid #000000;
+}
+.borderReg {
+  margin: 0 150px 40px 150px;
+  width: 300px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+}
+.borderReg a {
+  text-decoration: none;  /*下划线*/
+}
+.borderReg a:hover {
+  color: #cc0000;
+}
+
+/*logo*/
+.logo {
+  margin-top: 20px;
+  /*20+50+80，定位输入框*/
+  margin-bottom: 80px;
+  width: 170px;
+  height: 50px;
+}
+
+.sub {
+  margin: 0 150px 40px 150px;
+  width: 300px;
+  height: 50px;
+  background-color: #03A9F4;
+  color: #ffffff;
+  font-size: 24px;
+  /*去掉按钮的凸起*/
+  border:1px solid #ffffff;
+  /*边框圆角*/
+  border-radius:4px;
+}
