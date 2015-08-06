@@ -7,6 +7,7 @@ session_start();
  * Time: 20:24
  */
 require "sqlHelper.php";
+
 $username = $_POST["username"];
 $password = $_POST["password"];
 $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
@@ -16,6 +17,7 @@ if($row = $result->fetch_array()){
     $_SESSION['avatar'] = $row['avatar'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['username'] = $row['username'];
+    //echo $row['username'];
     echo true;
 } else {
     echo false;
