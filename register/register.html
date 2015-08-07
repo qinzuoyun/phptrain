@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-
+    <title>注册</title>
     <link rel="stylesheet" href="css/register.css">
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="js/reg-check.js"></script>
   </head>
   <body>
     <!--logo-->
@@ -11,16 +13,16 @@
       <div class="logo">
         <img src="images/logo.png" alt="" width="170px">
       </div>
-      <form action="#" method="post" class="input">
-        <input type="text" name="email" placeholder="邮箱"    class="border"><br>
-        <p class="error"></p>
-        <input type="text" name="user"  placeholder="您的姓名" class="border"><br>
-        <p class="error"></p>
-        <input type="password" name="password" placeholder="密码"    class="border"><br>
-        <p class="error"></p>
-        <input type="password" name="confirm"  placeholder="确认密码" class="border"><br>
-        <p class="error"></p>
-        <input type="submit" class="sub" value="注册">
+      <form>
+        <input type="text" name="email" placeholder="邮箱"    class="border email"><br>
+        <p class="email-error error"></p>
+        <input type="text" name="user"  placeholder="您的姓名" class="border username"><br>
+        <p class="username-error error"></p>
+        <input type="password" name="password" placeholder="密码"    class="border password"><br>
+        <p class="password-error error"></p>
+        <input type="password" name="confirm"  placeholder="确认密码" class="border confirm-password"><br>
+        <p class="confirm-password-error error"></p>
+        <input type="button" class="sub" value="注册">
       </form>
     </div>
   </body>

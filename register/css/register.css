@@ -1,12 +1,17 @@
 /*定位*/
+
+
 .location {
-  margin: 0 335px;
+  margin: 0 auto;
   width: 600px;
   height: 660px;
-  border: 1px solid#000000;
+  font-family: "microsoft yahei", sans-serif;
+
 }
 /*输入框大小*/
 .border {
+  font-family: "microsoft yahei", sans-serif;
+
   margin: 0 150px 20px 150px;
   width: 300px;
   height: 46px;
@@ -23,7 +28,11 @@
 {
   border: 1px solid #7b7c7d;
 }
+.error {
+  font-family: "microsoft yahei", sans-serif;
 
+  display: none;
+}
 
 /*logo*/
 .logo {
@@ -36,6 +45,8 @@
 
 /*注册按钮*/
 .sub {
+  font-family: "microsoft yahei", sans-serif;
+
   margin: 0 150px;
   width: 300px;
   height: 50px;
