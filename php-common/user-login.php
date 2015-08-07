@@ -13,12 +13,11 @@ $password = $_POST["password"];
 $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
 $result = $mysql->query($sql);
 if($row = $result->fetch_array()){
-    $_SESSION['userID'] = $row['userID'];
-    $_SESSION['avatar'] = $row['avatar'];
-    $_SESSION['email'] = $row['email'];
-    $_SESSION['username'] = $row['username'];
-    //echo $row['username'];
-    echo true;
+    foreach ($row as $key=>$value){
+        $_SESSION[$key] = $value;
+        $json[$key] = $value;
+    }
+    echo JSON($json);
 } else {
     echo false;
 }

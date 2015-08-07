@@ -26,7 +26,7 @@ var myAjax = function (username, password) {
                 if(data){
                     //login success
                     console.log("success: "+data);
-                    window.location.href="../project/index.html";
+                    window.location.href="../";
                 }else{
                     //replace after fix
                     console.log("用户名或密码错误");

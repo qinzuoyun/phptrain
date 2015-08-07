@@ -8,12 +8,17 @@ session_start();
  * 如果用户没有关联任何项目，返回false
  */
 require "sqlHelper.php";
+require "jsonHelper.php";
 if(isset($_SESSION['username'])){
-    $username = $_SESSION['username'];
-    $sql = "SELECT projectID,projectName,projectBanner FROM user_project,project WHERE user_project.userID='$username' AND user_project.projectID=project.projectID";
-    $result = $mysql->query($sql);
-    if(!empty($result)){
-        $json = json_encode($result->fetch_array());
+    $userID = $_SESSION['userID'];
+    $sql = "SELECT project.projectID,project.projectName,project.projectBanner FROM user_project,project WHERE user_project.userID='$userID' AND user_project.projectID=project.projectID";
+    $sqlResult = $mysql->query($sql);
+    $result;
+    if(!empty($sqlResult)){
+        foreach($sqlResult as $row=>$rowVal){
+            $result[$row] = $rowVal;
+        }
+        $json = JSON($result);
         echo $json;
     }else{
         echo "no-project";

@@ -7,3 +7,4 @@ session_start();
  * Time: 21:25
  */
 session_destroy();
+header("Location: ../");
