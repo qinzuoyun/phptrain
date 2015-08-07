@@ -5,7 +5,7 @@
  * Date: 2015/8/5
  * Time: 20:22
  */
-$mysql = new mysqli("localhost", "root","","user");
+$mysql = new mysqli("localhost", "root","","tm");
 if(mysqli_connect_errno()){
     die("Unable to connect!").mysqli_connect_error();
 }
