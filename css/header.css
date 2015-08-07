@@ -59,6 +59,7 @@ html{
     width: 105px;
 }
 .header-tool div{
+
     float: left;
     display: block;
     border-left: 1px solid #e2e2e2;
@@ -75,10 +76,13 @@ html{
     border-radius: 50%;
 }
 .tool-pop{
+    z-index: 100;
     width: auto;
     height: auto;
 }
 .tool-pop div{
+    z-index: 100;
+    background-color: white;
     display: none;
     position: absolute;
     right: 10px;
