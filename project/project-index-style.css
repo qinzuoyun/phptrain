@@ -1,0 +1,45 @@
+.projects{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.projects ul{
+    list-style: none;
+    padding:0 ;
+    margin: 15px;
+
+}
+.projects ul li{
+    display: inline-block;
+    height: 134px;
+    width: 267px;
+    margin: 30px 30px;
+
+}
+.projects ul li a{
+    text-decoration: none;
+}
+.projects ul li div{
+    height: 134px;
+    width: 267px;
+    border-radius: 5px;
+    border: 1px solid #dadada;
+    color: #353535;
+    opacity: 0.8;
+    -webkit-box-shadow:  0 0 20px rgba(98,98,98, 0.5);
+    -moz-box-shadow:   0 0  20px rgba(98,98,98, 0.5);
+    box-shadow:   0  0  20px rgba(98,98,98, 0.5);
+
+    -webkit-transition: box-shadow 0.3s, opacity 0.3s;
+    -moz-transition: box-shadow 0.3s, opacity 0.3s;
+    -ms-transition: box-shadow 0.3s, opacity 0.3s;
+    -o-transition: box-shadow 0.3s, opacity 0.3s;
+    transition: box-shadow 0.3s, opacity 0.3s;
+}
+.projects ul li div:hover{
+    opacity: 1;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow:  0 0 80px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:   0 0  80px rgba(0, 0, 0, 0.5);
+    box-shadow:   0  0  80px rgba(0, 0, 0, 0.5);
+
+}
