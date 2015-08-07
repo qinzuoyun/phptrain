@@ -8,7 +8,6 @@
     <script src="../js/jquery-1.11.3.js"></script>
     <script src="../js/popup.js"></script>
     <script src="project-index.js"></script>
-    <script src="../js/check-online.js"></script>
 </head>
 <body>
 <div class="container">
@@ -44,6 +43,19 @@
         </ul>
     </div>
 </div>
-
+<script>
+    $.ajax({
+        type: 'GET',
+        url: '../php-common/check-online.php',
+        success: function (data){
+            if(!data){
+                location.href='/phptrain/login/login.html';
+            }
+        },
+        error: function (e) {
+            console.log(e);
+        }
+    });
+</script>
 </body>
 </html>
