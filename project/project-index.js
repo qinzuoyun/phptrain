@@ -34,12 +34,14 @@ function fillProject (data) {
 
     for(var i = 0; i< data.length; i++){
         var holder = $(projectHolder);
+        holder.css('display','none');
         container.append(holder);
         holder.addClass('project'+i);
         holder.children('a').attr('href','home/index.html?projectID='+data[i].projectID);
         holder.children().children().children().html(data[i].projectName);
         console.log("url(\"../img/projectbanner/"+data[i].projectBanner+"\")");
         holder.children().children().css('background','url(\'../img/projectbanner/'+data[i].projectBanner+'\')');
+        holder.fadeIn(600);
 
     }
 
