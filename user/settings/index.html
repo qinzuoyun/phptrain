@@ -25,7 +25,7 @@
                 <img src="../../img/icon-add.png" alt="add"/>
             </div>
             <div class="tool-user">
-                <img class="header-user-avatar" src="../../img/avator.jpg" alt=""/>
+                <img class="header-user-avatar"/>
             </div>
         </div>
     </div>
@@ -42,4 +42,13 @@
     <!-- header end-->
 </div>
 </body>
+<script>
+    $.ajax({
+        type: 'GET',
+        url: '../../php-common/get-avatar.php',
+        success: function (data) {
+            $('.header-user-avatar').attr('src',data);
+        }
+    });
+</script>
 </html>
