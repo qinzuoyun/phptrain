@@ -6,6 +6,7 @@ body{
 html{
     font-family: "microsoft yahei", sans-serif;
     height: 100%;
+    background-color: #EEEEEE;
 }
 
 .header{
@@ -16,6 +17,7 @@ html{
     -webkit-box-shadow: 0 4px 4px -4px #d2d2d2;
     -moz-box-shadow: 0 4px 4px -4px #d2d2d2;
     box-shadow: 0 4px 4px -4px #d2d2d2;
+    background-color: white;
 }
 
 .logo{
@@ -103,4 +105,53 @@ html{
 .tool-pop a:hover{
     background-color: #e8e8e8;
 }
+/*project header*/
+.project-header{
+    height: 50px;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    background-color: #EEEEEE;
+    padding-left: 169px;
+}
+.project-header a{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 50px;
+    color: black;
+    margin-left: 50px;
 
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.project-header a:hover{
+    color: #03a9f4;
+}
+/*project-member*/
+.project-member{
+    position: fixed;
+    right: 0;
+    width: 200px;
+    top: 52px;
+    height: 100%;
+    border-left: 1px solid #c1c1c1;
+    background-color: white;
+}
+
+.invite{
+    border: 1px solid #c1c1c1;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    height: 25px;
+    margin-left: 10px;
+}
+.invite:focus,
+.invite:hover{
+    border: 1px solid #c1c1c1;
+    outline: none;
+}

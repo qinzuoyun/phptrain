@@ -6,8 +6,6 @@ var login = function () {
     var password = $('.password').val();
     myAjax(username, password);
 };
-    
-    
 var myAjax = function (username, password) {
     console.log('username: '+username);
     console.log('password: '+password);

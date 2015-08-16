@@ -17,7 +17,9 @@ if($row = $result->fetch_array()){
         $_SESSION[$key] = $value;
         $json[$key] = $value;
     }
-    echo JSON($json);
+    //set avatar url
+    $_SESSION['avatar'] = 'http://'.$_SERVER['HTTP_HOST'].'/phptrain/img/avatar/'.$json['avatar'];
+    echo true;
 } else {
     echo false;
 }
