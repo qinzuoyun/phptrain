@@ -26,7 +26,7 @@
                 <img src="../../img/icon-add.png" alt="add"/>
             </div>
             <div class="tool-user">
-                <img class="header-user-avatar" src="../../img/avator.jpg" alt=""/>
+                <img class="header-user-avatar"/>
             </div>
         </div>
     </div>
@@ -41,6 +41,26 @@
         </div>
     </div>
     <!-- header end-->
+    <!-- project header start -->
+    <div class="project-header">
+        <a href="#" class="project-home">项目主页</a>
+        <a href="#" class="project-task">项目任务</a>
+    </div>
+    <!-- project header end -->
+    <!-- project member start -->
+    <div class="project-member">
+        <input type="text" class="invite" placeholder="输入邮箱邀请用户">
+    </div>
+    <!-- project member end -->
 </div>
 </body>
+<script>
+    $.ajax({
+        type: 'GET',
+        url: '../../php-common/get-avatar.php',
+        success: function (data) {
+            $('.header-user-avatar').attr('src',data);
+        }
+    });
+</script>
 </html>
