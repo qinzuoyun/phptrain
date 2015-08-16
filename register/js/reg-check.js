@@ -1,24 +1,52 @@
-$(document).ready(function () {
-    //ÎÄ±¾¿òÊó±êµã»÷ÊÂ¼ş
-    $(".sub").click(function () {
-        $.ajax(
-        {
-            type: "GET",  //ÇëÇó·½Ê½
-            url: "../php-common/check-username.php",  //ÇëÇóÑéÖ¤Ò³Ãæ
-            data: {
-                username: $("#username").val()  //È¡µÃ±íÎÄ±¾¿òÊı¾İ£¬×÷ÎªÌá½»Êı¾İ
-            },
-            success:function(data) {
-                if(data){
-                    window.location.href="../login/login.html";
-                }else{
-                    $(".username").text("ÓÃ»§ÃûÖØ¸´");
-                }
-            },
-            error: function () {
-                alert("something wrong")
-            }
+$(document).ready(function() {
+    //å£°æ˜å˜é‡
+    var email;
+    var username;
+    var password;
+    var passwordConfirm;
+    //éªŒè¯
+    var emailOk = false;
+    var usernameOk = false;
+    var passwordOk = false;
+    var passwordConfirmOk = false;
+
+    $(".email").bind("input propertychange",function() {
+        email = $(".email").val();
+        var prase = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+        if (prase.test(email)) {
+            emailCheck(email);
+        }else {
+            $(".email-error").text("é‚®ç®±æ ¼å¼ä¸æ­£ç¡®");
+            emailOk = false;
         }
-        );
+
     });
+    function emailCheck(data) {
+        var flag = false;
+        $.ajax({
+           type:"GET",
+           url:"../php-common/check-email.php",
+           data:{
+             email: data
+           },
+           success:function(data) {
+               console.log("data is: "+data);
+               if(data) {
+                   console.log('not found');
+                   emailOk = true;
+                   $(".email-error").text("é‚®ç®±å¯ä»¥ä½¿ç”¨");
+               }else {
+                   console.log("find");
+                   emailOk = false;
+                   $(".email-error").text("é‚®ç®±å·²è¢«æ³¨å†Œ");
+               }
+           },
+           error: function(data) {
+               alert("something wrong");
+           }
+        });
+        console.log("flag: "+flag);
+        return flag;
+    }
+
 });
