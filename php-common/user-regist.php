@@ -14,6 +14,6 @@ $usernameExist = $mysql->query($check)->fetch_array();
 if($usernameExist) {
     echo 'user-exist';
 }else{
-    $sql = "INSERT INTO user(username, password, email, avatar) VALUES ('$username', '$password', '$email', 'default')";
+    $sql = "INSERT INTO user(username, password, email, avatar) VALUES ('$username', '$password', '$email', 'default.png')";
     $mysql->query($sql);
 }
