@@ -8,7 +8,7 @@ $(document).ready(function () {
     console.log(projectId);
     sessionStorage.setItem('projectId',projectId);
 });
-
+//从url读取参数
 function getProjectId (data){
     var parse = /^\?([A-Za-z]+)=(\d+)/;
     return parse.exec(data)[2];
