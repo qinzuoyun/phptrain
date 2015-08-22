@@ -11,9 +11,10 @@ function fetchProject(){
             url: "../php-common/get-all-project.php",
             success: function (data) {
                 //convert data to a json object.
+                console.log(data);
                 var json = JSON.parse(data);
                 fillProject(json);
-                console.log(json);
+
             },
             error: function (data) {
                 console.log(data);
