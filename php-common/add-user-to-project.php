@@ -8,13 +8,18 @@
 require "sqlHelper.php";
 $email = $_GET['email'];
 $sql = "SELECT * FROM user WHERE email='$email'";
-$result = $mysql->query($sql);
+$result = $mysql->query($sql)->fetch_array();
 if(!empty($result)){
     //exist
-    $row = $result->fetch_array();
-    $add = "INSERT INTO user_project(userID, projectID) VALUES ('$row[userID]', '$_GET[projectId]')";
-    $mysql->query($add);
-    echo "add user to project success";
+    $exist = "SELECT * FROM user_project WHERE userID='$result[userID]' AND projectID='$_GET[projectId]'";
+    if(empty($mysql->query($exist)->fetch_array())){
+        //if link not exist then add it
+        $add = "REPLACE INTO user_project(userID, projectID) VALUES ('$result[userID]', '$_GET[projectId]')";
+        $mysql->query($add);
+        echo "add-user-to-project-success";
+    }
+    echo "user already in project";
+
 }else{
     echo "user-not-exist-error";
 }

@@ -130,6 +130,7 @@ html{
 .project-header a:hover{
     color: #03a9f4;
 }
+
 /*project-member*/
 .project-member{
     position: fixed;
@@ -158,12 +159,19 @@ html{
     border: 1px solid #c1c1c1;
     outline: none;
 }
+.user-not-exist{
+    padding: 0 10px;
+    font-size: 10px;
+    text-align: center;
+    display: none;
+}
 .member-container{
     margin-left: 10px;
     height: auto;
     white-space: nowrap;
 
 }
+
 .member-container img,
 .member-container p{
     display: inline-block;

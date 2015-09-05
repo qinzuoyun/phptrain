@@ -33,11 +33,15 @@ function inviteUser (event) {
             success: function(data){
                 console.log(data);
                 if(data == "user-not-exist-error"){
-                    console.log("user not exist");
+                    $('.user-not-exist').slideDown();
                     //
-                }else{
+                }else if(data == "add-user-to-project-success"){
                     // add success
-                    console.log("success");
+                    $('.user-not-exist').text("邀请成功").slideDown();
+                    //update list
+                    getAllInvitedUser();
+                }else{
+                    $('.user-not-exist').text("用户已加入").slideDown();
                 }
             },
             error: function (data) {
@@ -70,7 +74,8 @@ function fillInvitedUser(json){
         <img src='' class='member-avatar' align='top'>\
         <p class='member-username'></p>\
         </div>";
-    var container = $('.project-member');
+    var container = $('.project-member-container');
+    container.empty();
     for(var i =0; i < json.length; i++){
         var holder = $(userHolder);
         container.append(holder);
