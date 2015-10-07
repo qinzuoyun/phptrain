@@ -2,8 +2,38 @@
  * Created by Lijin on 2015/8/6.
  * fetch user's project
  */
-$(document).ready(fetchProject());
+$(document).ready(function(){
 
+    fetchProject()
+
+    dialog({
+        trigger: '.tool-pop-add-project',
+        effectShow: function (element) {
+            element.fadeIn();
+        },
+        effectHide: function (element) {
+            element.fadeOut();
+        },
+        dialogContent: "dialog-add-project.html"
+    });
+});
+function addProject(projectName){
+    $.ajax({
+        type: "POST",
+        url: "../php-common/add-project.php",
+        data:{
+            projectName: projectName
+        },
+        success: function (data) {
+            console.log("success"+data);
+        },
+        error: function (data) {
+            console.log("error"+data);
+        }
+
+
+    });
+}
 function fetchProject(){
     $.ajax(
         {
@@ -11,9 +41,10 @@ function fetchProject(){
             url: "../php-common/get-all-project.php",
             success: function (data) {
                 //convert data to a json object.
+                console.log(data);
                 var json = JSON.parse(data);
                 fillProject(json);
-                console.log(json);
+
             },
             error: function (data) {
                 console.log(data);
